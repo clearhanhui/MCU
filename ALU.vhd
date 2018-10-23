@@ -25,14 +25,14 @@ architecture behave of ALU is
 		carry <= alu_result(16);
 		with alu_func_sel select
 			alu_result <= alu_ar32+alu_br32    				  when "0001",		-- 加
-						     alu_ar32-alu_br32 					  when "0010",		-- 减
-							  alu_ar*alu_br						  when "0011",		-- 乘
-						     alu_ar32 and alu_br32				  when "0101",		-- AND
-						     alu_ar32 or alu_br32 				  when "0110",		-- OR
-						     not alu_ar32 					     when "0111",		-- NOT
-							  alu_ar32 xor alu_br32 			  when "1000",		-- XOR
+						     alu_ar32-alu_br32 			  when "0010",		-- 减
+						     alu_ar*alu_br			  when "0011",		-- 乘
+						     alu_ar32 and alu_br32		  when "0101",		-- AND
+						     alu_ar32 or alu_br32 	          when "0110",		-- OR
+						     not alu_ar32 			  when "0111",		-- NOT
+						     alu_ar32 xor alu_br32 		  when "1000",		-- XOR
 						     alu_ar32 (30 downto 0) & "0" 	  when "1001",		-- Right_Shift
 						     "0" & alu_ar32 (31 downto 1) 	  when "1010",		-- Left_Shift
 --						     not (alu_ar32 xor alu_br32)      when "1010",		-- 同或
-						     (others=>'0') 			           when others;
+						     (others=>'0') 			  when others;
 end architecture;
