@@ -1,0 +1,48 @@
+# do MCU.do 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module MCU
+# 
+# Top level modules:
+# 	MCU
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module MCU_vlg_sample_tst
+# -- Compiling module MCU_vlg_check_tst
+# -- Compiling module MCU_vlg_vec_tst
+# 
+# Top level modules:
+# 	MCU_vlg_vec_tst
+# vsim -L cycloneiv_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -voptargs=\"+acc\" -t 1ps -novopt work.MCU_vlg_vec_tst 
+# Loading work.MCU_vlg_vec_tst
+# Loading work.MCU
+# Loading cycloneiv_ver.cycloneiv_io_obuf
+# Loading cycloneiv_ver.cycloneiv_io_ibuf
+# Loading cycloneiv_ver.cycloneiv_clkctrl
+# Loading cycloneiv_ver.cycloneiv_mux41
+# Loading cycloneiv_ver.cycloneiv_ena_reg
+# Loading cycloneiv_ver.cycloneiv_lcell_comb
+# Loading altera_ver.dffeas
+# Loading cycloneiv_ver.cycloneiv_ram_block
+# Loading cycloneiv_ver.cycloneiv_ram_register
+# Loading cycloneiv_ver.cycloneiv_ram_pulse_generator
+# Loading work.MCU_vlg_sample_tst
+# Loading work.MCU_vlg_check_tst
+# SDF 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Loading instances from MCU_v.sdo
+# Loading altera_ver.PRIM_GDFF_LOW
+# Loading timing data from MCU_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /MCU_vlg_vec_tst File: Waveform.vwf.vt
+# ** Error: i:/quartus/modelsim_ase/win32aloem/../altera/verilog/src/altera_primitives.v(293): $hold( posedge clk &&& reset:40025 ps, ena:40082 ps, 157 ps );
+#    Time: 40082 ps  Iteration: 0  Instance: /MCU_vlg_vec_tst/i1/\G1|ar[13] 
+# ** Error: i:/quartus/modelsim_ase/win32aloem/../altera/verilog/src/altera_primitives.v(293): $hold( posedge clk &&& reset:40025 ps, ena:40082 ps, 157 ps );
+#    Time: 40082 ps  Iteration: 0  Instance: /MCU_vlg_vec_tst/i1/\G1|ar[3] 
+# ** Error: i:/quartus/modelsim_ase/win32aloem/../altera/verilog/src/altera_primitives.v(293): $hold( posedge clk &&& reset:540025 ps, ena:540082 ps, 157 ps );
+#    Time: 540082 ps  Iteration: 0  Instance: /MCU_vlg_vec_tst/i1/\G1|ar[13] 
+# ** Error: i:/quartus/modelsim_ase/win32aloem/../altera/verilog/src/altera_primitives.v(293): $hold( posedge clk &&& reset:540025 ps, ena:540082 ps, 157 ps );
+#    Time: 540082 ps  Iteration: 0  Instance: /MCU_vlg_vec_tst/i1/\G1|ar[3] 
+# Simulation passed !
+# ** Note: $finish    : Waveform.vwf.vt(1005)
+#    Time: 2 us  Iteration: 0  Instance: /MCU_vlg_vec_tst/tb_out

@@ -1,0 +1,36 @@
+--file name ALU.vhd
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity ALU is 
+	port (
+	func_sel:in std_logic_vector(3 downto 0);
+	ar:in std_logic_vector(15 downto 0);
+	br:in std_logic_vector(15 downto 0);
+	data_acc:out std_logic_vector(31 downto 0);
+	carry:out std_logic);
+end entity;
+
+architecture behave of ALU is 
+	signal ar32,br32:std_logic_vector(31 downto 0);
+	signal result:std_logic_vector(31 downto 0);
+	
+	begin
+		ar32 <= "0000000000000000" & ar;
+		br32 <= "0000000000000000" & br;
+		data_acc <= result;
+		carry <= result(16);
+		
+		with func_sel select
+			result <= ar32+br32    				  when "0001",
+						 ar32-br32 					  when "0010",
+						 ar*br						  when "0011",
+						 ar32 and br32				  when "0101",
+						 ar32 or br32 				  when "0110",
+						 not ar32 					  when "0111",
+						 ar32 (30 downto 0) & "0" when "1000",
+						 "0" & ar32 (31 downto 1) when "1001",
+						 not (ar32 xor br32)            when "1010",
+						 (others=>'0') 			  when others;
+end architecture;

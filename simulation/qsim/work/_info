@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dI:\project-quartus\MCU\simulation\qsim
+vMCU
+Z1 Ib;bKjHz]?aOfeDmie4o_l2
+Z2 VhzHk3:J=Vc2LNU0D9c^i[2
+Z3 dI:\project-quartus\MCU1\simulation\qsim
+Z4 w1540295943
+Z5 8MCU.vo
+Z6 FMCU.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|MCU.vo|
+Z9 o-work work -O0
+Z10 n@m@c@u
+!i10b 1
+Z11 !s100 4R3@[TY3=3H;T?L=Pe9Gl2
+!s85 0
+Z12 !s108 1540295944.331000
+Z13 !s107 MCU.vo|
+!s101 -O0
+vMCU_vlg_check_tst
+!i10b 1
+Z14 !s100 <]P2PW?fQ`8W3Ye0V:K`i0
+Z15 IUzOWnM]FGM[KEKXC5<T1[1
+Z16 Vo@gC@F;;g=dHbmglL6jJT1
+R3
+Z17 w1540295940
+Z18 8Waveform.vwf.vt
+Z19 FWaveform.vwf.vt
+L0 61
+R7
+r1
+!s85 0
+31
+Z20 !s108 1540295944.529000
+Z21 !s107 Waveform.vwf.vt|
+Z22 !s90 -work|work|Waveform.vwf.vt|
+!s101 -O0
+R9
+Z23 n@m@c@u_vlg_check_tst
+vMCU_vlg_sample_tst
+!i10b 1
+Z24 !s100 <bmj`kTS:KWDXema0n3I=2
+Z25 I><mj_JfSm935abk^WXG6H0
+Z26 VmGz7:l^[iFMIWf=7752ko1
+R3
+R17
+R18
+R19
+L0 29
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R9
+Z27 n@m@c@u_vlg_sample_tst
+vMCU_vlg_vec_tst
+!i10b 1
+Z28 !s100 P?U4V[l@hV8oQAL^V@f:L0
+Z29 Im86A@5eVkCizJfh1h[VaB0
+Z30 V[6fCeF0:>O6UMn=2M8kI:1
+R3
+R17
+R18
+R19
+Z31 L0 1009
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R9
+Z32 n@m@c@u_vlg_vec_tst

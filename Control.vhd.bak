@@ -1,0 +1,51 @@
+---Control.vhd
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+use ieee.std_logic_arith.all;
+
+entity Control is
+port (
+	clk,rst: in std_logic;
+	func_sel: in std_logic_vector(3 downto 0);
+	ar,br: in std_logic_vector(15 downto 0);
+	result: out std_logic_vector(31 downto 0));
+end Control;
+
+
+architecture behave of Control is 
+	type statesType is(s15,s14,s13,s12,s11,s10,s9,s8,s7,s6,s5,s4,s3,s2,s1,s0);
+	signal state: statesType := s0;
+	
+	signal ar32,br32: std_logic_vector (31 downto 0);
+	--signal resultReg : std_logic_vector (31 downto 0);
+	--the reslut can be also used variable
+	
+	begin 
+		ar32 <= "0000000000000000" & ar;
+		br32 <= "0000000000000000" & br;
+		
+	process (clk,rst)
+	  variable resultReg : std_logic_vector(31 downto 0);
+	  begin 
+	    if clk'event and clk = '1' then 
+			if rst = '1' then state<=s0;
+			else 
+			  case state is
+			    when s0 => state <= s1;
+				 when s1 => state <= s2;
+					if     func_sel="0001" then resultReg := ar32 + br32;
+					elsif  func_sel="0011" then resultReg := ar * br;
+					elsif  func_sel="0101" then resultReg := ar32 and br32;
+					elsif  func_sel="1000" then resultReg := ar32 (30 downto 0) & '0';
+					else null;
+					end if;
+				 when s2 => state <= s3;
+				 when s3 => state <= s0; result <= resultReg;
+				 
+				 when others => state <= s0;
+				end case;
+			 end if;
+		  end if;	
+	end process;
+end behave;	

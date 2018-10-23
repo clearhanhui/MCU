@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="MCU">
+		<CBX_INST_ENTRY INSTANCE_NAME="|MCU|ALU:G4|lpm_mult:Mult0" CBX_FILE_NAME="mult_1ht.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MCU|ALU:G4|lpm_mult:Mult0|mult_1ht:auto_generated|alt_mac_mult:mac_mult1" CBX_FILE_NAME="mac_mult_r2h1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MCU|ram_design:G3|altsyncram:ram_rtl_0" CBX_FILE_NAME="altsyncram_0vg1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MCU|ALU:G4|lpm_mult:Mult0|mult_1ht:auto_generated|alt_mac_out:mac_out2" CBX_FILE_NAME="mac_out_kv82.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MCU|rom_design:G2|altsyncram:rom_rtl_0" CBX_FILE_NAME="altsyncram_8i51.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
